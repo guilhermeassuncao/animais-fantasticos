@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <!-- Meta -->
         <meta charset="utf-8" />
@@ -20,6 +20,13 @@
         />
         <link rel="stylesheet" type="text/css" href="./public/css/style.css" />
         <!-- Fim Link -->
+
+        <!-- Script -->
+        <script>
+            document.documentElement.className = "js";
+        </script>
+
+        <!-- Fim Script -->
     </head>
     <body>
         <!-- Navegação -->
@@ -36,7 +43,7 @@
         <!-- Seção Animais -->
         <section class="grid-section animais" id="animais">
             <h1 class="titulo">Animais Fantásticos</h1>
-            <ul class="animais-lista">
+            <ul class="animais-lista js-tabmenu">
                 <li>
                     <img src="./public/img/imagem1.jpg" />
                 </li>
@@ -56,7 +63,7 @@
                     <img src="./public/img/imagem6.jpg" />
                 </li>
             </ul>
-            <div class="animais-descricao">
+            <div class="animais-descricao js-tabcontent">
                 <section>
                     <h2>Raposa</h2>
                     <p>
