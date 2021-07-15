@@ -180,6 +180,34 @@ body {
     font-family: Helvetica, Arial;
     margin-bottom: 0.5rem;
     margin-left: 30px;
+    margin-top: 1rem; 
+}
+
+.js .js-accordion dd {
+    display: none;
+}
+
+.js-accordion dt::after {
+    content: " ⮧";
+}
+
+.js-accordion dt.ativo::after {
+    content: " ⮦";
+}
+
+.js-accordion dd.ativo {
+    display: block;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 200px;
+    }
 }
 
 /* Seção Contato */
@@ -216,6 +244,18 @@ body {
     padding: 20px;
     font-family: "JetBrains Mono", monospace;
     font-weight: bold;
+}
+
+/* Animção ao Scroll */
+.js .js-scroll {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+    transition: 0.25s;
+}
+
+.js .js-scroll.ativo {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
 
 /* Responsivo */
