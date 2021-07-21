@@ -30,7 +30,7 @@
     </head>
     <body>
         <!-- Navegação -->
-        <nav class="menu js-menu">
+        <nav class="menu" data-menu="suave">
             <ul>
                 <li><a href="#animais">Animais</a></li>
                 <li><a href="#faq">Faq</a></li>
@@ -41,9 +41,9 @@
         <!-- Fim Navegação -->
 
         <!-- Seção Animais -->
-        <section class="grid-section animais js-scroll" id="animais">
+        <section class="grid-section animais" data-anime="scroll" id="animais">
             <h1 class="titulo">Animais Fantásticos</h1>
-            <ul class="animais-lista js-tabmenu">
+            <ul class="animais-lista" data-tab="menu">
                 <li>
                     <img src="./public/img/imagem1.jpg" />
                 </li>
@@ -63,8 +63,8 @@
                     <img src="./public/img/imagem6.jpg" />
                 </li>
             </ul>
-            <div class="animais-descricao js-tabcontent">
-                <section>
+            <div class="animais-descricao" data-tab="content">
+                <section data-anime="show-right">
                     <h2>Raposa</h2>
                     <p>
                         Raposas são pequenos a médios mamíferos onívoros pertencentes a vários gêneros da família
@@ -89,8 +89,7 @@
                         Novo Mundo.
                     </p>
                 </section>
-
-                <section>
+                <section data-anime="show-down">
                     <h2>Esquilo</h2>
                     <p>
                         Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte,
@@ -115,7 +114,7 @@
                         receber os filhotes que variam de 3 a 10 por ninhada.
                     </p>
                 </section>
-                <section>
+                <section data-anime="show-right">
                     <h2>Urso</h2>
                     <p>
                         Os Ursos constituem uma família de mamíferos plantígrados, da ordem Carnivora, geralmente de
@@ -138,7 +137,7 @@
                         agrioteríneos.
                     </p>
                 </section>
-                <section>
+                <section data-anime="show-down">
                     <h2>Lobo</h2>
                     <p>
                         O lobo é uma espécie de mamífero canídeo do gênero Canis, da família dos cães e raposas. É um
@@ -159,7 +158,7 @@
                         questionados recentemente.
                     </p>
                 </section>
-                <section>
+                <section data-anime="show-right">
                     <h2>Macaco</h2>
                     <p>
                         Macaco é um termo de origem africana (provavelmente do banto makako) utilizado como designação
@@ -181,7 +180,7 @@
                         chato".
                     </p>
                 </section>
-                <section>
+                <section data-anime="show-down">
                     <h2>Leão</h2>
                     <p>
                         O leão é uma espécie de mamífero carnívoro do gênero Panthera e da família Felidae. A espécie é
@@ -210,9 +209,9 @@
         <!-- Fim Seção Animais -->
 
         <!-- Seção Faq -->
-        <section class="grid-section faq js-scroll" id="faq">
+        <section class="grid-section faq" data-anime="scroll" id="faq">
             <h1 class="titulo">FAQ</h1>
-            <dl class="faq-lista js-accordion">
+            <dl class="faq-lista" data-anime="accordion">
                 <dt>Qual a idade dos animais?</dt>
                 <dd>
                     Tem ciclo de vida normal para o tipo de mamífero: vive entre 9 e 10. Entretanto, indivíduos com 12
@@ -247,7 +246,7 @@
         <!-- Fim Seção Faq -->
 
         <!-- Seção Contato -->
-        <section class="grid-section contato js-scroll" id="contato">
+        <section class="grid-section contato" data-anime="scroll" id="contato">
             <h1 class="titulo">Contato</h1>
             <div class="mapa">
                 <img src="./public/img/mapa.png" />
@@ -269,6 +268,7 @@
 
         <!-- Script -->
         <script src="./public/js/app.js"></script>
+        <script src="./public/js/animacoes.js"></script>
         <!-- Script -->
     </body>
 </html>
