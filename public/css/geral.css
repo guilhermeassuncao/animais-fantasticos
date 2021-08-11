@@ -253,6 +253,21 @@ body {
     background: #fb5;
 }
 
+[data-semana]::after {
+    display: inline-block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #e54;
+    border-radius:50%;
+    margin-left: 5px;
+    border: 2px solid black;
+}
+
+[data-semana].aberto::after {
+    background: #3f4;
+}
+
 /* Footer */
 .copy {
     grid-column: 3/5;
