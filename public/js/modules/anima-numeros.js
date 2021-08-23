@@ -21,6 +21,8 @@ export default function initAnimaNumeros() {
         });
     }
 
+    let observer;
+
     function handleMutation(mutation) {
         if (mutation[0].target.classList.contains("ativo")) {
             observer.disconnect();
@@ -28,8 +30,9 @@ export default function initAnimaNumeros() {
         }
     }
 
+    observer = new MutationObserver(handleMutation);
+
     const observerTarget = document.querySelector(".numeros");
 
-    const observer = new MutationObserver(handleMutation);
     observer.observe(observerTarget, { attributes: true });
 }
