@@ -1,5 +1,5 @@
 import ScrollSmooth from "./modules/scroll-suave.js";
-import initAnimateScroll from "./modules/scroll-animacao.js";
+import ScrollAnimacao from "./modules/scroll-animacao.js";
 import Accordion from "./modules/accordion.js";
 import TabNav from "./modules/tabnav.js";
 import Modal from "./modules/modal.js";
@@ -7,8 +7,8 @@ import ToolTip from "./modules/tooltip.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initHorarioFuncionamento from "./modules/horario-funcionamento.js";
-import initFetchAnimais from "./modules/fetch-animais.js";
-import initFetchBtc from "./modules/fetch-btc.js";
+import fetchAnimais from "./modules/fetch-animais.js";
+import fetchBtc from "./modules/fetch-btc.js";
 
 const scrollSmooth = new ScrollSmooth('[data-menu="suave"] a[href^="#"]');
 scrollSmooth.init();
@@ -30,5 +30,5 @@ initAnimateScroll();
 initDropdownMenu();
 initMenuMobile();
 initHorarioFuncionamento();
-initFetchAnimais();
-initFetchBtc();
+fetchAnimais('/public/json/animais.json', '.numeros-grid');
+fetchBtc("https://blockchain.info/ticker", ".btc-preco");
