@@ -9,6 +9,7 @@ import MenuMobile from "./modules/menu-mobile.js";
 import HorarioFuncionamento from "./modules/horario-funcionamento.js";
 import fetchAnimais from "./modules/fetch-animais.js";
 import fetchBtc from "./modules/fetch-btc.js";
+import SlideNav from "./modules/slide.js";
 
 const scrollSmooth = new ScrollSmooth('[data-menu="suave"] a[href^="#"]');
 scrollSmooth.init();
@@ -36,6 +37,11 @@ menuMobile.init();
 
 const horarioFuncionamento = new HorarioFuncionamento("[data-semana]", "aberto");
 horarioFuncionamento.init();
+
+const slideNav = new SlideNav(".slide", ".slide-wrapper");
+slideNav.init();
+slideNav.addControl('.custom-controls');
+
 
 fetchAnimais("/public/json/animais.json", ".numeros-grid");
 fetchBtc("https://blockchain.info/ticker", ".btc-preco");
