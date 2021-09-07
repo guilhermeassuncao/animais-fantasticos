@@ -3,7 +3,7 @@
 <br>
 
 <div align="center">
-  <img src="Brafé 1/Bootstrap/public/img/brafe-github.svg" alt="brafe">
+  <img src="public/img/animais-fantasticos-github.svg" alt="Animais Fantásticos">
 </div>
 
 <br>
