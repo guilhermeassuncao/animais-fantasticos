@@ -32,9 +32,7 @@ export default function fetchAnimais(url, target) {
                 preencherAnimais(animal);
             });
 
-            animaAnimaisNumeros()
-
-
+            animaAnimaisNumeros();
         } catch (erro) {
             console.log(erro);
         }

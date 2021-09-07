@@ -7,12 +7,12 @@ export default class ToolTip {
         this.onMouseOver = this.onMouseOver.bind(this);
     }
 
-    onMouseMove({pageY, pageX}) {
+    onMouseMove({ pageY, pageX }) {
         this.tooltipBox.style.top = `${pageY + 20}px`;
         this.tooltipBox.style.left = `${pageX + 20}px`;
     }
 
-    onMouseLeave({currentTarget}) {
+    onMouseLeave({ currentTarget }) {
         this.tooltipBox.remove();
         currentTarget.removeEventListener("mouseleave", this.onMouseLeave);
         currentTarget.removeEventListener("mousemove", this.onMouseMove);
@@ -29,7 +29,7 @@ export default class ToolTip {
         this.tooltipBox = tooltipBox;
     }
 
-    onMouseOver({currentTarget}) {
+    onMouseOver({ currentTarget }) {
         this.criarTooltipBox(currentTarget);
 
         currentTarget.addEventListener("mousemove", this.onMouseMove);

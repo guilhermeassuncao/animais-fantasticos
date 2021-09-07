@@ -7,7 +7,7 @@ export class Slide {
         this.dist = { finalPosition: 0, startX: 0, movement: 0 };
         this.activeClass = "active";
 
-        this.changeEvent = new Event('changeEvent');
+        this.changeEvent = new Event("changeEvent");
     }
 
     transition(active) {
@@ -76,10 +76,10 @@ export class Slide {
 
     slidesConfig() {
         this.slideArray = [...this.slide.children].map((element) => {
-          const position = this.slidePosition(element);
-          return { position, element };
+            const position = this.slidePosition(element);
+            return { position, element };
         });
-      }
+    }
 
     slidesIndexNav(index) {
         const last = this.slideArray.length - 1;
@@ -190,7 +190,7 @@ export default class SlideNav extends Slide {
             this.changeSlide(index);
         });
 
-        this.wrapper.addEventListener('changeEvent', this.activeControlItem);
+        this.wrapper.addEventListener("changeEvent", this.activeControlItem);
     }
 
     activeControlItem() {

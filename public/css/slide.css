@@ -1,4 +1,5 @@
-.galeria {
+/* Slide */
+.gallery {
     grid-column: 1/-1;
 }
 

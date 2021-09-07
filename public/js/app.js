@@ -40,8 +40,7 @@ horarioFuncionamento.init();
 
 const slideNav = new SlideNav(".slide", ".slide-wrapper");
 slideNav.init();
-slideNav.addControl('.custom-controls');
-
+slideNav.addControl(".custom-controls");
 
 fetchAnimais("/public/json/animais.json", ".numeros-grid");
 fetchBtc("https://blockchain.info/ticker", ".btc-preco");

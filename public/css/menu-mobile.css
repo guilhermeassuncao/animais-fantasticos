@@ -1,7 +1,9 @@
+/* Menu Mobile */
 [data-menu="button"] {
     display: none;
 }
 
+/* Responsivo */
 @media (max-width: 700px) {
     .js [data-menu="button"] {
         display: flex;
@@ -28,7 +30,7 @@
         width: 12px;
         background: white;
         box-shadow: 0 4px #fff, 0 -4px #fff;
-        transition: transform .3s;
+        transition: transform 0.3s;
     }
 
     .js [data-menu="button"].active::before {
