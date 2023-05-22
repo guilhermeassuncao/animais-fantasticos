@@ -1,10 +1,10 @@
-import debounce from "./debounce.js";
+import debounce from './debounce.js';
 
 export default class ScrollAnimacao {
     constructor(secoes) {
         this.sections = document.querySelectorAll(secoes);
         this.windowMetade = window.innerHeight * 0.5;
-        this.activeClass = "ativo";
+        this.activeClass = 'ativo';
 
         this.checkDistance = debounce(this.checkDistance.bind(this), 50);
     }
@@ -30,13 +30,13 @@ export default class ScrollAnimacao {
         if (this.sections.length) {
             this.getDistance();
             this.checkDistance();
-            window.addEventListener("scroll", this.checkDistance);
+            window.addEventListener('scroll', this.checkDistance);
         }
 
         return this;
     }
 
     stop() {
-        window.removeEventListener("scroll", this.checkDistance);
+        window.removeEventListener('scroll', this.checkDistance);
     }
 }

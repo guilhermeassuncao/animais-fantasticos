@@ -1,4 +1,3 @@
-/* Dropdown */
 [data-dropdown] {
     position: relative;
 }
@@ -22,7 +21,7 @@
 }
 
 .dropdown-menu::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     top: -10px;
@@ -37,7 +36,6 @@
     color: white;
 }
 
-/* Animação */
 @keyframes show-up {
     from {
         opacity: 0;
@@ -49,7 +47,6 @@
     }
 }
 
-/* Responsivo */
 @media (max-width: 700px) {
     [data-dropdown] .dropdown-menu {
         display: block;

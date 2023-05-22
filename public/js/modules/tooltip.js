@@ -14,14 +14,14 @@ export default class ToolTip {
 
     onMouseLeave({ currentTarget }) {
         this.tooltipBox.remove();
-        currentTarget.removeEventListener("mouseleave", this.onMouseLeave);
-        currentTarget.removeEventListener("mousemove", this.onMouseMove);
+        currentTarget.removeEventListener('mouseleave', this.onMouseLeave);
+        currentTarget.removeEventListener('mousemove', this.onMouseMove);
     }
 
     criarTooltipBox(element) {
-        const tooltipBox = document.createElement("div");
-        const text = element.getAttribute("aria-label");
-        const classTooltip = "tooltip";
+        const tooltipBox = document.createElement('div');
+        const text = element.getAttribute('aria-label');
+        const classTooltip = 'tooltip';
         tooltipBox.classList.add(classTooltip);
         tooltipBox.innerText = text;
         document.body.appendChild(tooltipBox);
@@ -32,13 +32,13 @@ export default class ToolTip {
     onMouseOver({ currentTarget }) {
         this.criarTooltipBox(currentTarget);
 
-        currentTarget.addEventListener("mousemove", this.onMouseMove);
-        currentTarget.addEventListener("mouseleave", this.onMouseLeave);
+        currentTarget.addEventListener('mousemove', this.onMouseMove);
+        currentTarget.addEventListener('mouseleave', this.onMouseLeave);
     }
 
     addTooltipsEventes() {
         this.tooltips.forEach((item) => {
-            item.addEventListener("mouseover", this.onMouseOver);
+            item.addEventListener('mouseover', this.onMouseOver);
         });
     }
 

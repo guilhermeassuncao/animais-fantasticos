@@ -1,6 +1,6 @@
 export default function outsideClick(element, events, callback) {
     const html = document.documentElement;
-    const outSide = "data-outside";
+    const outSide = 'data-outside';
 
     function handleOutsideClick(event) {
         if (!element.contains(event.target)) {
@@ -18,6 +18,6 @@ export default function outsideClick(element, events, callback) {
             });
         });
 
-        element.setAttribute(outSide, "");
+        element.setAttribute(outSide, '');
     }
 }
